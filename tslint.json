@@ -9,11 +9,29 @@
     ]
   },
   "rules": {
-    "indent": [true, "spaces", 2],
+    "indent": [true, "spaces", 4],
     "interface-name": false,
     "no-consecutive-blank-lines": false,
     "object-literal-sort-keys": false,
     "ordered-imports": false,
-    "quotemark": [true, "single"]
+    "quotemark": [true, "single"],
+    "eofline": true,
+    "no-console": false,
+    "no-construct": true,
+    "no-debugger": true,
+    "no-duplicate-super": true,
+    "no-empty": true,
+    "no-eval": true,
+    "no-trailing-whitespace": false,
+    "semicolon": [false, "always"],
+    "variable-name": false,
+    "no-shadowed-variable": false,
+    "forin": false,
+    "jsx-quotes": [2, "prefer-single"],
+    "quotes": [2, "single", {
+        "avoidEscape": true,
+        "allowTemplateLiterals": true
+    }],
+    "no-var-requires": false
   }
 }

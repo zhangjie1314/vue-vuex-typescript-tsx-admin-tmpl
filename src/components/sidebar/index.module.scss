@@ -1,0 +1,16 @@
+.el-menu-vertical {
+    width: 200px;
+    max-width: 200px;
+    min-width: 200px;
+    min-height: 100vh;
+}
+.sidebar-menu {
+    position: relative;
+    .logo {
+        padding: 10px 0;
+        text-align: center;
+        z-index: 10;
+        box-sizing: border-box;
+        background: #161b20;
+    }
+}

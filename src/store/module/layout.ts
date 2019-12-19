@@ -20,8 +20,9 @@ const mutations: MutationTree<LayoutState> = {
         }
     },
     // 更新菜单
-    UPDATE_MENULIST: state => {
-        const localData = localStorage.getItem('permission') ? JSON.parse(localStorage.getItem('permission')) : []
+    UPDATE_MENULIST: (state) => {
+        const premission = localStorage.getItem('permission')
+        const localData = premission ? JSON.parse(premission) : []
         const menuList: any[] = []
         localData.forEach((el: any) => {
             menuList.push(itorater(el))

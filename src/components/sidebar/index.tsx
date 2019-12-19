@@ -49,7 +49,11 @@ export default class Sidebar extends Vue {
     // 子菜单
     public subMenuNode(sub: [any]) {
         sub.map((item, idx) => {
-            return <el-menu-item key={idx} index={item.meta.path}>{item.meta.title}</el-menu-item>
+            return (
+                <el-menu-item key={idx} index={item.meta.path}>
+                    {item.meta.title}
+                </el-menu-item>
+            )
         })
     }
 
@@ -72,21 +76,17 @@ export default class Sidebar extends Vue {
                     class={style['el-menu-vertical']}
                     collapse={this.isCollapse}
                 >
-                    {
-                        this.menuList.map((sub, idx) => {
-                            return(
-                                <el-submenu key={idx} index={sub.path} v-show={!sub.meta.hide}>
-                                    <div slot='title'>
-                                        <i class='el-icon-s-home' />
-                                        <span slot='title'>{sub.meta.title}</span>
-                                    </div>
-                                    {
-                                        sub.children && sub.children.length > 0 ? this.subMenuNode(sub.children) : ''
-                                    }
-                                </el-submenu>
-                            )
-                        })
-                    }
+                    {this.menuList.map((sub, idx) => {
+                        return (
+                            <el-submenu key={idx} index={sub.path} v-show={!sub.meta.hide}>
+                                <div slot='title'>
+                                    <i class='el-icon-s-home' />
+                                    <span slot='title'>{sub.meta.title}</span>
+                                </div>
+                                {sub.children && sub.children.length > 0 ? this.subMenuNode(sub.children) : ''}
+                            </el-submenu>
+                        )
+                    })}
                 </el-menu>
             </div>
         )

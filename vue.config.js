@@ -18,7 +18,7 @@ module.exports = {
         config.resolve.alias.set('@', resolve('src')).set('_c', resolve('src/components'))
     },
     css: {
-        modules: false, // 启用 CSS modules
+        requireModuleExtension: true, // 启用 CSS modules
         extract: true, // 是否使用css分离插件
         sourceMap: false, // 开启 CSS source maps?
         loaderOptions: {}, // css预设器配置项

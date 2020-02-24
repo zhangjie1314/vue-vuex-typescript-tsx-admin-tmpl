@@ -41,7 +41,7 @@ export default class Layout extends Vue {
                 </el-aside>
                 <el-container>
                     <el-header id='header' class={style['page-title']}>
-                        <h2>怦怦健身.让你的管理更高效更简单</h2>
+                        <h2>Aine.让你的管理更高效更简单</h2>
                         <div class={style['user-operating']}>
                             <el-dropdown trigger='click' command={this.handleCommand}>
                                 <span class={style.user}>

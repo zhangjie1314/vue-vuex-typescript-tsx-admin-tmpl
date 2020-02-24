@@ -12,12 +12,13 @@ export default class Login extends Vue {
     }
 
     public rulesFrom = {
-        name: [ { required: true, message: '用户名不能为空！', trigger: 'blur' } ],
-        password: [ { required: true, message: '用户密码不能为空！', trigger: 'blur' } ],
+        name: [{ required: true, message: '用户名不能为空！', trigger: 'blur' }],
+        password: [{ required: true, message: '用户密码不能为空！', trigger: 'blur' }],
     }
 
     public mounted() {
         //
+        console.log(style)
     }
 
     public handleSubmit() {
